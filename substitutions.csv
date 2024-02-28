@@ -1,0 +1,10 @@
+substitution_name,smiles
+none,[H]
+methyl,[CH3]
+trifluoromethyl,[CH0](F)(F)F
+cyano,[CH0]#N
+tertbutyl,[CH3]C(C)(C)C
+mesityl,[cH0]1(C)cc(cc(c1)C)C
+SiMe3,[SiH0](-C)(-C)-C
+pyrrole,[NH0]1C=CC=C1
+benzyl,[cH0]1ccccc1
