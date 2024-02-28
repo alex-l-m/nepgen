@@ -1,7 +1,6 @@
 from rdkit import Chem
 from rdkit.Chem import Draw
 from rdkit.Chem import AllChem
-import pandas as pd
 
 ligand_l = Chem.MolFromSmiles('SC1=C(S)N=C(N2C([Ir]3C4N(C5=NC(S)=C(S)N=C5N4C6=C(C(I)=C(C2=C63)Cl)Cl)C)N7C)C7=N1')
 
