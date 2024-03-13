@@ -40,11 +40,6 @@ def sub_combinations(ligand, sub1, sub2, sub3,              # returns a set of a
     return substituted_ligands
 
 
-# set1_unfiltered = sub_combinations(ligand_l, sub_1, sub_2, sub_3)
-# set1 = set(smiles for smiles in set1_unfiltered if Chem.MolFromSmiles(smiles) is not None)
-# Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in set1], molsPerRow=8, subImgSize=(200, 200)).show()
-
-
 def sub_one_group(ligand, sub, p1=Chem.MolFromSmiles('S')):
     substituted_ligands = set()
     for x in sub:
@@ -53,13 +48,19 @@ def sub_one_group(ligand, sub, p1=Chem.MolFromSmiles('S')):
             substituted_ligands.add(Chem.MolToSmiles(ligand_w_sub, True))
     return substituted_ligands
 
+
 # # Save SMILES strings of substituted ligands
 # output_smiles_filename = 'substituted_ligands.txt'
 # with open(output_smiles_filename, 'w') as f:
 #     for x in set1:
 #         f.write(x + '\n')
 
+# Show images of sub_combinations
+# set1_unfiltered = sub_combinations(ligand_l, sub_1, sub_2, sub_3)
+# set1 = set(smiles for smiles in set1_unfiltered if Chem.MolFromSmiles(smiles) is not None)
+# Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in set1], molsPerRow=8, subImgSize=(200, 200)).show()
 
-set1_unfiltered = sub_one_group(ligand_top, sub_1)
-set1 = set(smiles for smiles in set1_unfiltered if Chem.MolFromSmiles(smiles) is not None)
-Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in set1], molsPerRow=8, subImgSize=(200, 200)).show()
+# Show images of sub_one_group
+sub_one_set = sub_one_group(ligand_l, sub_1)
+sos_set = set(smiles for smiles in sub_one_set if Chem.MolFromSmiles(smiles) is not None)
+Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in sos_set], molsPerRow=8, subImgSize=(200, 200)).show()
