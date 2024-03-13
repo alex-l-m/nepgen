@@ -4,7 +4,7 @@ methyl,[CH3]
 trifluoromethyl,[CH0](F)(F)F
 cyano,[CH0]#N
 tertbutyl,[CH2]C(C)(C)C
-mesityl,[cH0]1(C)cc(cc(c1)C)C
+mesityl,Cc1[c]c(C)cc(C)c1
 SiMe3,[SiH0](-C)(-C)-C
 pyrrole,[NH0]1C=CC=C1
 benzyl,[cH0]1ccccc1
