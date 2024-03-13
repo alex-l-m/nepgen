@@ -60,7 +60,7 @@ def sub_one_group(ligand, sub, p1=Chem.MolFromSmiles('S')):
 # set1 = set(smiles for smiles in set1_unfiltered if Chem.MolFromSmiles(smiles) is not None)
 # Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in set1], molsPerRow=8, subImgSize=(200, 200)).show()
 
-# Show images of sub_one_group
+# Show images of sub_one_group, issues with mesityl group
 sub_one_set = sub_one_group(ligand_l, sub_1)
 sos_set = set(smiles for smiles in sub_one_set if Chem.MolFromSmiles(smiles) is not None)
 Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in sos_set], molsPerRow=8, subImgSize=(200, 200)).show()
