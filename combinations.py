@@ -15,10 +15,6 @@ ligand_l = Chem.MolFromSmiles('SC1=C(N=C(C2=N1)N3C(N2C)=[Ir]4=C5N(C)C6=NC(S)=C(N
 ligand_top = Chem.MolFromSmiles('SC1=CN=C(C2=N1)N3C(N2C)=[Ir]4=C5N(C)C6=NC(S)=CN=C6N5C7=C(Cl)C(I)=C(Cl)C3=C74')
 ligand_bot = Chem.MolFromSmiles('CN1C(N2C3=NC(S)=CN=C31)=[Ir]4=C5N(C)C6=NC=C(S)N=C6N5C7=C(Cl)C(I)=C(Cl)C2=C74')
 
-Draw.MolToImage(Chem.AddHs(ligand_l)).show()
-Draw.MolToImage(Chem.AddHs(ligand_top)).show()
-Draw.MolToImage(Chem.AddHs(ligand_bot)).show()
-
 
 def smiles_to_rdkit_mol(sub_list):  # converts list of smiles strings to rdkit molecules
     rdkit_list = []                 # list of rdkit molecules
