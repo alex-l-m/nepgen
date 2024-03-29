@@ -65,13 +65,7 @@ set_b = sub_combinations(ligand_bot, sub_1, sub_2, sub_3)
 set_fb = set(smiles for smiles in set_b if Chem.MolFromSmiles(smiles) is not None)
 Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in set_fb], molsPerRow=8, subImgSize=(200, 200)).show()
 
-# Show images of sub_one_group
-# sub_one_set = sub_one_group(ligand_bot, sub_1)
-# sos_set = set(smiles for smiles in sub_one_set if Chem.MolFromSmiles(smiles) is not None)
-# Draw.MolsToGridImage([Chem.AddHs(Chem.MolFromSmiles(x)) for x in sos_set], molsPerRow=5, subImgSize=(200, 200)).show()
-
-# # Save SMILES strings of substituted ligands
-# output_smiles_filename = 'substituted_ligands.txt'
-# with open(output_smiles_filename, 'w') as f:
-#     for x in set_fl:
-#         f.write(x + '\n')
+# Save SMILES strings of substituted ligands
+output_smiles_filename = 'left_ligands.txt'
+left_ligands = set_fl.union(set_ft).union(set_fb)
+open(output_smiles_filename, 'w').writelines(smiles + '\n' for smiles in left_ligands)
